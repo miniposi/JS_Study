@@ -268,4 +268,20 @@ console.log(solution("ksekkset"));
 
 ### 17. 중복단어 제거
 ``` js
+function solution(words) {
+  let answer = [];
+
+  let map = new Map();
+  for (let word of words) {
+    if (!map.has(word)) {
+      map.set(word, true);
+      answer.push(word);
+    }
+  }
+
+  return answer;
+}
+
+let input = ["good", "time", "good", "time", "student"];
+console.log(solution(input));
 ```
