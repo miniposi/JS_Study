@@ -248,7 +248,21 @@ console.log(solution("study"));
 
 ### 16. 중복문자 제거
 ``` js
+function solution(words) {
+  let answer = "";
 
+  let map = new Map();
+  for (let word of words) {
+    if (!map.has(word)) {
+      map.set(word, true);
+      answer += word;
+    }
+  }
+
+  return answer;
+}
+
+console.log(solution("ksekkset"));
 ```
 <br>
 
